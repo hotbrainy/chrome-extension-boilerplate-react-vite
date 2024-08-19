@@ -1,0 +1,12 @@
+{
+  "extends": "@extension/tsconfig/app.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": ["vite/client", "node", "chrome"],
+    "paths": {
+      "@root/*": ["./*"],
+      "@lib/*": ["lib/*"]
+    }
+  },
+  "include": ["lib", "utils", "vite.config.mts", "node_modules/@types"]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "@extension/content-ui",
+  "version": "0.2.2",
+  "description": "chrome extension content ui",
+  "private": true,
+  "sideEffects": true,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build:tailwindcss": "tailwindcss -i src/tailwind-input.css -o src/tailwind-output.css",
+    "build": "pnpm run clean && pnpm type-check && pnpm build:tailwindcss && vite build",
+    "build:watch": "cross-env __DEV__=true concurrently \"vite build --mode development\" \"pnpm run build:tailwindcss -- --watch\"",
+    "dev": "pnpm build:watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "pnpm lint --fix",
+    "prettier": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit",
+    "postinstall": "pnpm run build:tailwindcss"
+  },
+  "dependencies": {
+    "@extension/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@extension/tailwindcss-config": "workspace:*",
+    "@extension/tsconfig": "workspace:*",
+    "@extension/hmr": "workspace:*",
+    "@extension/vite-config": "workspace:*"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@extension/storage",
+  "version": "0.2.2",
+  "description": "chrome extension storage",
+  "private": true,
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "main": "./dist/index.js",
+  "types": "index.ts",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "ready": "node build.mjs",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "pnpm lint --fix",
+    "prettier": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@extension/tsconfig": "workspace:*"
+  }
+}

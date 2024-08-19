@@ -1,0 +1,26 @@
+{
+  "name": "@extension/content-runtime-script",
+  "version": "0.2.2",
+  "description": "chrome extension content runtime script",
+  "private": true,
+  "sideEffects": true,
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "pnpm run clean && pnpm type-check && vite build",
+    "build:watch": "cross-env __DEV__=true vite build -w --mode development",
+    "dev": "pnpm build:watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "pnpm lint --fix",
+    "prettier": "prettier . --write --ignore-path ../../.prettierignore",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@extension/tsconfig": "workspace:*",
+    "@extension/hmr": "workspace:*",
+    "@extension/vite-config": "workspace:*"
+  }
+}
