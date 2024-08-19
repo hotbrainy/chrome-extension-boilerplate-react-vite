@@ -58,7 +58,7 @@
     "run-script-os": "^1.1.6",
     "tailwindcss": "^3.4.6",
     "tslib": "^2.6.3",
-    "turbo": "^2.0.12",
+    "turbo": "^2.0.14",
     "typescript": "5.5.3",
     "vite": "5.3.3"
   },
