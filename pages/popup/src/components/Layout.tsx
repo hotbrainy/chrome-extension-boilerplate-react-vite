@@ -38,7 +38,11 @@ const Layout = () => {
             icon={isLight ? <FaMoon /> : <FaSun />}
           />
         }
-        actions={[<Button onClick={injectContentScript}>Click to inject Content Script</Button>]}>
+        actions={[
+          <Button key="inject" onClick={injectContentScript}>
+            Click to inject Content Script
+          </Button>,
+        ]}>
         <Outlet />
       </Card>
     </ConfigProvider>

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import '@src/index.css';
 import Popup from '@src/Popup';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { /* BrowserRouter, */ HashRouter } from 'react-router-dom';
 
 function init() {
   const appContainer = document.querySelector('#app-container');
