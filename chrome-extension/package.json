@@ -29,7 +29,7 @@
     "@extension/vite-config": "workspace:*",
     "@laynezh/vite-plugin-lib-assets": "^0.5.23",
     "@types/ws": "^8.5.11",
-    "magic-string": "^0.30.10",
+    "magic-string": "^0.30.12",
     "ts-loader": "^9.5.1",
     "deepmerge": "^4.3.1"
   }
